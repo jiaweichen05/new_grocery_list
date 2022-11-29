@@ -1,0 +1,22 @@
+#banner h1, #banner img 
+{
+    display: inline-block;
+}
+#banner h1{
+    font-size: 50px;
+}
+#img
+{
+    height: 7%;
+    width: 7%;
+    text-align: right;
+}
+button{
+    display: inline-block;
+}
+#shoppingList
+{
+    /* border: black 1px solid; */
+    /* width: 5%; */
+    line-height: 50%;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div id="banner">
+        <img id="img" src="images/shopping_cart.jpeg" alt="shopping cart image">
+        <h1>Grocery List</h1>
+    </div>
+    <div>
+        <form id="form">
+            <input type="text" name="groceryInput" placeholder="Enter Groceries Here">
+            <input type="number" name="numInput" value="1">
+            <button type="button" id="add">Add Grocery Item</button>
+            <button type="button" id="delete">Delete Grocery Item</button>
+        </form>
+    </div>
+    <div>
+        <h2>Shopping List</h2>
+        <form>
+            <button type="button" id="moveUp">↑</button>
+            <button type="button" id="moveDown">↓</button>
+        </form>
+    </div>
+
+
+    <div id="shoppingList"></div>
+
+</body>
+<script>
+    form = document.getElementById("form")
+    groceryInput = document.getElementById("groceryInput")
+    numInput = document.getElementById("numInput")
+    add = document.getElementById("add")
+    del = document.getElementById("delete")
+    moveUp = document.getElementById("moveUp")
+    moveDown = document.getElementById("moveDown")
+    shoppingList = document.getElementById("shoppingList")
+    groceryVal = ""
+    numVal = -1
+    groceryArr = []
+
+    add.addEventListener("click", addGrocery)
+    del.addEventListener("click", deleteGrocery)
+    moveUp.addEventListener("click", moveUpList)
+    moveDown.addEventListener("click", moveDownList)
+</script>
+</html>
