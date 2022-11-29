@@ -11,12 +11,21 @@
     width: 7%;
     text-align: right;
 }
-button{
-    display: inline-block;
-}
 #shoppingList
 {
     /* border: black 1px solid; */
     /* width: 5%; */
     line-height: 50%;
+}
+.form-div
+{
+    margin-bottom: 10px;
+}
+.list-div h2
+{
+    display: inline-block;
+}
+.list-div form
+{
+    display: inline-block;
 }
