@@ -1,3 +1,6 @@
+itemIdx = null
+itemVal = null
+
 function recordData()
 {
     groceryVal = form.groceryInput.value
