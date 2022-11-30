@@ -31,28 +31,48 @@ function deleteGrocery()
 function moveUpList()
 {
     recordData()
-    if (numVal > 1 && numVal <= groceryArr.length)
+    idx = numVal - 1
+
+    if (itemIdx === null || itemIdx != idx)
     {
-        idx = numVal - 1
-        aboveIdx = idx - 1
-        aboveVal = groceryArr[aboveIdx]
-        atVal = groceryArr[idx]
-        groceryArr.splice(aboveIdx, 2, atVal, aboveVal)
-        // groceryArr.push(firstVal)
-        rewriteList()
+        itemIdx = idx
+        itemVal = groceryArr[idx]
     }
+
+    currentIdx = groceryArr.indexOf(itemVal)
+
+    if (currentIdx === 0)
+    {
+        alert("Can't move up anymore! \nEnter a number of a different grocery item")
+        return
+    }
+    swapVal(currentIdx, currentIdx - 1)
+    rewriteList()
 }
 function moveDownList()
 {
     recordData()
-    if (numVal >= 1 && numVal < groceryArr.length)
+    idx = numVal - 1
+
+    if (itemIdx === null || itemIdx != idx)
     {
-        idx = numVal - 1
-        belowIdx = idx + 1
-        belowVal = groceryArr[belowIdx]
-        atVal = groceryArr[idx]
-        groceryArr.splice(idx, 2, belowVal, atVal)
-        // groceryArr.push(firstVal)
-        rewriteList()
+        itemIdx = idx
+        itemVal = groceryArr[idx]
     }
+
+    currentIdx = groceryArr.indexOf(itemVal)
+
+    if (currentIdx === groceryArr.length - 1)
+    {
+        alert("Can't move down anymore \nEnter a number of a different grocery item")
+        return 
+    }
+    swapVal(currentIdx, currentIdx + 1)
+    rewriteList()
+}
+function swapVal(idx1, idx2)
+{
+    temp = groceryArr[idx2]
+    groceryArr[idx2] = groceryArr[idx1]
+    groceryArr[idx1] = temp
 }
