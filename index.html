@@ -36,18 +36,18 @@
 
 </body>
 <script>
-    form = document.getElementById("form")
-    groceryInput = document.getElementById("groceryInput")
-    numInput = document.getElementById("numInput")
-    add = document.getElementById("add")
-    del = document.getElementById("delete")
-    moveUp = document.getElementById("moveUp")
-    moveDown = document.getElementById("moveDown")
-    shoppingList = document.getElementById("shoppingList")
-    groceryVal = ""
-    numVal = -1
-    groceryArr = []
-
+    let form = document.getElementById("form")
+    let groceryInput = document.getElementById("groceryInput")
+    let numInput = document.getElementById("numInput")
+    let add = document.getElementById("add")
+    let del = document.getElementById("delete")
+    let moveUp = document.getElementById("moveUp")
+    let moveDown = document.getElementById("moveDown")
+    let shoppingList = document.getElementById("shoppingList")
+    let groceryVal = ""
+    let numVal = -1
+    const groceryArr = []
+    
     add.addEventListener("click", addGrocery)
     del.addEventListener("click", deleteGrocery)
     moveUp.addEventListener("click", moveUpList)
