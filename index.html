@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Grocery List</title>
+    <title>Shopping Sim</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/shopping_cart.png">
     <script src="index.js"></script>
 
 </head>
-<body>
+<body onload="createTable();" style="background-color: lightblue">
     <div id="banner">
-        <img id="img" src="images/shopping_cart.jpeg" alt="shopping cart image">
-        <h1>Grocery List</h1>
+        <div><img id="img" src="images/shopping_cart.png" alt="shopping cart image"></div>
+        <h1>Shopping Simulator</h1>
     </div>
     <div>
         <form id="form">
             <div class="form-div">
-                <input type="text" name="groceryInput" placeholder="Enter Groceries Here">
-                <button type="button" id="add">Add Grocery Item</button>
+                <br>
+                <h2>Add Items</h2>
+                <input type="text" name="groceryInput" placeholder="Enter Item Here">
+                
+                <button type="button" id="add">Add Grocery Item</button><hr>
             </div>
             <div class="form-div">
-                <input type="number" name="numInput" value="1">
+                <h2>Modify Items</h2>
+                <input id="numInput" type="number" name="numInput" placeholder="Enter Item Number" value="">
+                <button type="button" id="moveUp">↑</button>
+                <button type="button" id="moveDown">↓</button>
                 <button type="button" id="delete">Delete Grocery Item</button>
             </div>
         </form>
     </div>
     <div class="list-div">
-        <h2>Shopping List</h2>
+        <hr><h2>Cart</h2>
         <form>
-            <button type="button" id="moveUp">↑</button>
-            <button type="button" id="moveDown">↓</button>
+
         </form>
     </div>
 
-
     <div id="shoppingList"></div>
+    <table id="groceryTable">
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </table>
 
 </body>
 <script>
+    let groceryTable = document.getElementById("groceryTable");
     let form = document.getElementById("form")
     let groceryInput = document.getElementById("groceryInput")
     let numInput = document.getElementById("numInput")

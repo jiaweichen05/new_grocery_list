@@ -8,6 +8,7 @@
 }
 #banner h1{
     font-size: 50px;
+    color: green
 }
 #img
 {
@@ -41,4 +42,20 @@
 body
 {
     text-align: center;
+}
+td {
+    border: thick solid green;
+    padding: 5px;
+  }
+h2{
+    color: green
+}
+body{
+    color: green;
+    font-style: bold;
+  }
+button{
+    color: green;
+    border-color: green;
+    background-color: lightgreen;
 }

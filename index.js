@@ -12,31 +12,32 @@ let recordData = () => {
     numVal = parseInt(form.numInput.value)
 }
 
-function rewriteList()
-{
-    shoppingList.innerHTML = ""
-    for (let i = 0; i < groceryArr.length; i++)
-    {
-        let listDisplay = i + 1
-        shoppingList.innerHTML += "<p>" + listDisplay + ": " + groceryArr[i] + "</p>"
-    }
-}
 function addGrocery()
 {
     recordData()
     groceryArr.push(groceryVal)
-    rewriteList()
+    createTable()
 }
+
 function deleteGrocery()
 {
     recordData()
     let idx = numVal - 1
     groceryArr.splice(idx, 1)
-    rewriteList()
+    createTable()
 }
+
 function moveUpList()
 {
+
     recordData()
+
+    if (isNaN(numVal))
+    {
+        (numVal = 1)
+        document.getElementById("numInput").value = 1;
+    }
+
     let idx = numVal - 1
 
     if (itemIdx === null || itemIdx != idx)
@@ -53,11 +54,20 @@ function moveUpList()
         return
     }
     swapVal(currentIdx, currentIdx - 1)
-    rewriteList()
+    createTable()
+    document.getElementById("numInput").value = String(groceryArr.indexOf(itemVal) + 1);
 }
+
 function moveDownList()
 {
     recordData()
+
+    if (isNaN(numVal))
+    {
+        (numVal = 1)
+        document.getElementById("numInput").value = 1;
+    }
+
     let idx = numVal - 1
 
     if (itemIdx === null || itemIdx != idx)
@@ -74,5 +84,29 @@ function moveDownList()
         return 
     }
     swapVal(currentIdx, currentIdx + 1)
-    rewriteList()
+    createTable()
+    document.getElementById("numInput").value = String(groceryArr.indexOf(itemVal) + 1);
+}
+
+function createTable() {
+    groceryTable.replaceChildren();
+    let tableSize = groceryArr.length;
+    (tableSize == 0) ? emptyCart() : addCartItems(tableSize)
+}
+
+function emptyCart() {
+    let newRow = groceryTable.insertRow();
+    let newCell = newRow.insertCell();
+    newCell.innerHTML = "Empty!"
+}
+
+function addCartItems(tableSize) {
+    for (let i = 0; i < tableSize; i++) {
+        let newRow = groceryTable.insertRow();
+        let newCell = newRow.insertCell();
+        itemNum = i + 1;
+        newCell.innerHTML = `Item ${itemNum}`;
+        newCell = newRow.insertCell();
+        newCell.innerHTML = groceryArr[i];
+        }
 }
