@@ -12,7 +12,7 @@
         <img id="img" src="images/shopping_cart.png" alt="shopping cart image">
         <h1>Shopping Simulator</h1>
     </div>
-    <div>
+    <div class="container">
         <form id="form">
             <div class="form-div">
                 <br>
@@ -29,22 +29,21 @@
                 <button type="button" id="delete">Delete Grocery Item</button>
             </div>
         </form>
+        <div class="list-div">
+            <hr><h2>Cart</h2>
+            <form>
+    
+            </form>
+        </div>
+    
+        <div id="shoppingList"></div>
+        <table id="groceryTable">
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </table>
     </div>
-    <div class="list-div">
-        <hr><h2>Cart</h2>
-        <form>
-
-        </form>
-    </div>
-
-    <div id="shoppingList"></div>
-    <table id="groceryTable">
-        <tr>
-          <th></th>
-          <th></th>
-        </tr>
-      </table>
-
 </body>
 <script>
     let groceryTable = document.getElementById("groceryTable");

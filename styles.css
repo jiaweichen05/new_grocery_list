@@ -45,10 +45,6 @@
 {
     display: inline-block;
 }
-body
-{
-    text-align: center;
-}
 td {
     border: thick solid green;
     padding: 5px;
@@ -59,9 +55,14 @@ h2{
 body{
     color: green;
     font-style: bold;
+    text-align: center;
+    margin: 0 0 0 0;
   }
 button{
     color: green;
     border-color: green;
     background-color: lightgreen;
+}
+.container{
+    margin: 8px;
 }
