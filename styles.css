@@ -1,12 +1,16 @@
-#banner
+.banner
 {
     background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-#banner h1, #banner img 
+.banner h1, .banner img 
 {
     display: inline-block;
 }
-#banner h1{
+.banner h1{
     font-size: 50px;
     color: green
 }
@@ -24,6 +28,8 @@
 }
 .form-div
 {
+    /* display: flex;
+    flex-direction: ; */
     margin-bottom: 10px;
     text-align: left;
 }
