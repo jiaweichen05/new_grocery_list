@@ -75,10 +75,11 @@ button{
     grid-template-rows: repeat(3, 100px);
     grid-template-columns: repeat(2, 100px);
 }
-.visual{
-    display: flex;
-}
 img {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
+}
+.visual-container{
+    display: flex;
+    flex-direction: row;
 }
