@@ -66,20 +66,21 @@ button{
 .container{
     margin: 8px;
 }
-.flex-container{
+.flex-column{
     display: flex;
     flex-direction: column;
+    width: 50%;
+}
+.flex-container{
+    display: flex;
 }
 .grid-container{
     display: grid;
     grid-template-rows: repeat(3, 100px);
     grid-template-columns: repeat(2, 100px);
+    gap: 2%;
 }
 img {
     height: 200px;
     width: 200px;
-}
-.visual-container{
-    display: flex;
-    flex-direction: row;
 }
