@@ -34,10 +34,16 @@ function moveUpList()
 
     if (isNaN(numVal))
     {
-        (numVal = 1)
+        numVal = 1; 
         document.getElementById("numInput").value = 1;
     }
 
+    if (numVal < 1 || numVal > groceryArr.length - 1)
+    {
+        alert("Invalid Grocery Item Number! Please try again!")
+        return
+    }
+    
     let idx = numVal - 1
 
     if (itemIdx === null || itemIdx != idx)
@@ -64,8 +70,14 @@ function moveDownList()
 
     if (isNaN(numVal))
     {
-        (numVal = 1)
+        numVal = 1
         document.getElementById("numInput").value = 1;
+    }
+
+    if (numVal < 1 || numVal > groceryArr.length - 1)
+    {
+        alert("Invalid Grocery Item Number! Please try again!")
+        return
     }
 
     let idx = numVal - 1
