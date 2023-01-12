@@ -12,27 +12,34 @@
         <img id="img" src="images/shopping_cart.png" alt="shopping cart image">
         <h1>Shopping Simulator</h1>
     </div>
-    <div class="container">
-        <form id="form">
-            <div class="form-div">
-                <br>
-                <h2>Add Items</h2>
-                <input type="text" name="groceryInput" placeholder="Enter Item Here">
-                
-                <button type="button" id="add">Add Grocery Item</button><hr>
+    <div class="content">
+        <div class="flex-row">
+            <form id="form">
+                <div class="form-div">
+                    <h2>Add Items</h2>
+                    <input type="text" name="groceryInput" placeholder="Enter Item Here">
+                    <button type="button" id="add">Add Grocery Item</button>
+                </div>
+                <div class="form-div">
+                    <h2>Modify Items</h2>
+                    <input id="numInput" type="number" name="numInput" placeholder="Enter Item Number" value="">
+                    <button type="button" id="moveUp">↑</button>
+                    <button type="button" id="moveDown">↓</button>
+                    <button type="button" id="delete">Delete Grocery Item</button>
+                </div>
+            </form>
+            <div class="img-flex">
+                <img src="images/bread.png" alt="image of bread">
+                <img src="images/apple.png" alt="image of apples">
+                <img src="images/lemon.png" alt="image of lemons">
+                <img src="images/tomato.png" alt="image of tomatoes">
+                <img src="images/broccoli.png" alt="image of broccoli">
             </div>
-            <div class="form-div">
-                <h2>Modify Items</h2>
-                <input id="numInput" type="number" name="numInput" placeholder="Enter Item Number" value="">
-                <button type="button" id="moveUp">↑</button>
-                <button type="button" id="moveDown">↓</button>
-                <button type="button" id="delete">Delete Grocery Item</button>
-            </div>
-        </form>
-        <div class="flex-container">
+        </div>
+        <div class="flex-row">
             <div class="flex-column">
                 <div class="list-div">
-                    <hr><h2>Cart</h2>
+                    <h2>Cart</h2>
                     <form>
             
                     </form>
@@ -44,19 +51,15 @@
                             <th></th>
                             <th></th>
                         </tr>
-                        </table>
+                    </table>
                 </div>
             </div>
-
-            <div class="grid-container">
-                <img src="images/bread.jpeg" alt="image of great bread">
-                <img src="images/egg.jpeg" alt="image of great eggs">
-                <img src="images/juice.jpeg" alt="image of great juice">
-                <img src="images/milk.jpg" alt="image of great milk">
-                <img src="images/salmon.jpeg" alt="image of great salmon">
-            </div>
+            
         </div>
+
+    
     </div>
+ 
 </body>
 <script>
     let groceryTable = document.getElementById("groceryTable");
