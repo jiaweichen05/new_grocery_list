@@ -38,7 +38,7 @@ function moveUpList()
         document.getElementById("numInput").value = 1;
     }
 
-    if (numVal < 1 || numVal > groceryArr.length - 1)
+    if (numVal < 1 || numVal > groceryArr.length)
     {
         alert("Invalid Grocery Item Number! Please try again!")
         return
@@ -68,13 +68,15 @@ function moveDownList()
 {
     recordData()
 
+    // test case: input is empty
     if (isNaN(numVal))
     {
         numVal = 1
         document.getElementById("numInput").value = 1;
     }
 
-    if (numVal < 1 || numVal > groceryArr.length - 1)
+    //test case: input is outside of valid range of numbers
+    if (numVal < 1 || numVal > groceryArr.length)
     {
         alert("Invalid Grocery Item Number! Please try again!")
         return
@@ -82,6 +84,7 @@ function moveDownList()
 
     let idx = numVal - 1
 
+    // initializes global vars & tests index equality 
     if (itemIdx === null || itemIdx != idx)
     {
         itemIdx = idx
