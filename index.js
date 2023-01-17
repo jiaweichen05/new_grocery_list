@@ -46,7 +46,7 @@ function moveUpList()
     
     let idx = numVal - 1
 
-    if (itemIdx === null || itemIdx != idx)
+    if (itemIdx === null || itemIdx !== idx)
     {
         itemIdx = idx
         itemVal = groceryArr[idx]
@@ -85,7 +85,7 @@ function moveDownList()
     let idx = numVal - 1
 
     // initializes global vars & tests index equality 
-    if (itemIdx === null || itemIdx != idx)
+    if (itemIdx === null || itemIdx !== idx)
     {
         itemIdx = idx
         itemVal = groceryArr[idx]
@@ -93,7 +93,7 @@ function moveDownList()
 
     let currentIdx = groceryArr.indexOf(itemVal)
 
-    if (currentIdx == groceryArr.length - 1)
+    if (currentIdx === groceryArr.length - 1)
     {
         alert("Can't move down anymore \nEnter a number of a different grocery item")
         return 
@@ -106,7 +106,7 @@ function moveDownList()
 function createTable() {
     groceryTable.replaceChildren();
     let tableSize = groceryArr.length;
-    (tableSize == 0) ? emptyCart() : addCartItems(tableSize)
+    (tableSize === 0) ? emptyCart() : addCartItems(tableSize)
 }
 
 function emptyCart() {
