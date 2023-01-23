@@ -95,3 +95,7 @@ hr:before {
     border-width: 0 0 1.5px 0;
     border-radius: 20px;
 }
+p {
+    text-align: left;
+    font-size: 11px;
+}
